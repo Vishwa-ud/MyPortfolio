@@ -389,7 +389,7 @@ const expCards = [
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/vishwa-udayantha-7271892a2/',
+        link: 'https://lk.linkedin.com/in/vishwa-kuruppu-7271892a2',
     },
     {
       name: 'Instagram',
