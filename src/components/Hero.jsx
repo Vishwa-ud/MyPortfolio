@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Button from "../components/Button";
 import { words } from "../constants";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 
 const Hero = () => {
   useGSAP(() => {
@@ -49,10 +50,13 @@ const Hero = () => {
               <h1>that Deliver Results</h1>
             </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Vishwa Udayantha, a developer based in Croatia with a passion for
-              code.
-            </p>
+            <div className="text-white-50 md:text-xl relative z-10">
+              <TextGenerateEffect 
+                words="Hi, I'm Vishwa Kuruppu, A Software Engineer from Sri Lanka."
+                className="text-white-50 md:text-xl font-normal"
+                duration={0.5}
+              />
+            </div>
             <Button
               text="More About Me"
               className="md:w-80 md:h-16 w-60 h-12"
