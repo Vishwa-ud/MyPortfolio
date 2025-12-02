@@ -235,27 +235,34 @@ import {
   
 const expCards = [
   {
-    review: "Vishwa’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review: "Worked as a remote Intern Full Stack Developer at Datadyne Technologies LLC, a US-based startup. Collaborated closely with the engineering team to support the development and enhancement of a cross-platform desktop application . Contributed to improving product stability, refining user experience, and assisting with core technical processes to support the application's release and scalability.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo2.png",
     title: "Intern Full Stack Developer",
     date: "April 2024 - October 2024",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
+      "Contributed to development of cross-platform desktop app using ElectronJs for Automotive Shop performance monitor.",
+      "Fix ongoing issues and implemented new features based on Client feedback.",
+      "Research and development Licensing and distribution of desktop application.",
+      "Integrate payment gateways.",
     ],
   },
   {
-    review: "Vishwa’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review: "This research project was carried out for LOLC Technologies to explore and build intelligent automation solutions for IT support. The work focused on analyzing research gaps and designing core components such as intelligent AI agents, conversational form-filling automation, integrated knowledge-base access, and avatar-driven interfaces. The project also involved studying suitable microservice architectures to support scalability and modularity. Throughout the development process, we followed Agile software engineering practices to iteratively design, implement, and evaluate the system based on real client requirements.",
     imgPath: "/images/exp2.svg",
     logoPath: "/images/logo3.png",
     title: "Research Project",
     date: "October 2024 - October 2025",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Developed a Generative AI-based Coustomer and Employee IT Support Chatbot.",
+      "Collaborated with the team to implement features based on Client Requirements.",
+      "Designed and implemented an automated form-filling system using Rasa to collect user data through conversational flows.",
+      "Trained custom Rasa NLU models with example data for accurate intent recognition and entity extraction.",
+      "Built a form-loop mechanism with interruption and fallback handling to manage complex support conversations.",
+      "Implemented automated ticket classification using Sentence Transformers (ALL-MiniLM-L6) with metadata-based similarity matching.",
+      "Integrated LLM-powered suggestion generation using Ollama (Phi-3) to propose subjects and descriptions for user issues.",
+      "Developed a hybrid priority-detection engine combining keyword scoring and semantic analysis with business-rule adjustments.",
+      "Implemented automated ticket submission workflow and JSON output generation for API integration with client systems.",
     ],
   },
 ];
