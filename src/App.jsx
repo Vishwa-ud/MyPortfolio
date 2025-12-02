@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import {Home, About, Contact, Experience, Feedbacks, Hero, Navbar, Tech , LogoShowcase , Works, StarsCanvas, Footer} from './components';
+import {Home, About, Contact, Experience, ProExperience , Feedbacks, Hero, Navbar, Tech , LogoShowcase , Works, StarsCanvas, Footer} from './components';
 
 const MainContent = () => {
   return (
@@ -11,6 +11,7 @@ const MainContent = () => {
       </div>
       <About />
       <Experience />
+      <ProExperience />
       <Tech />
       <LogoShowcase />
       <Works />
