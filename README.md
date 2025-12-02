@@ -11,7 +11,7 @@ Embark on a virtual journey through my portfolio, set on a captivating floating 
 
 ## Check It Out!
 Feel free to explore my portfolio and see what I've been up to. If you have any questions or would like to get in touch, don't hesitate to reach out!
-[View Portfolio](https://vishwa-udayantha.netlify.app/).
+[View Portfolio]().
 
 <br />
 <img src="https://github.com/Vishwa-ud/3D-Web-Developer-Portfolio/assets/94515855/1c0af101-b70f-4314-bd14-7c69a30b3266" alt="Project Banner">
