@@ -51,7 +51,11 @@ import {
     },
     {
       id: "work",
-      title: "Work",
+      title: "Education",
+    },
+    {
+      id: "experience",
+      title: "Experience",
     },
     {
       id: "contact",
