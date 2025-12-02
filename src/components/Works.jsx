@@ -145,31 +145,33 @@ const Works = () => {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className='absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#915EFF] text-white p-3 sm:p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300 group'
+          className='absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-10 bg-[#151030] border-2 border-[#915EFF] hover:bg-[#915EFF] text-[#915EFF] hover:text-white p-2 sm:p-3 md:p-4 rounded-full shadow-xl hover:shadow-2xl hover:shadow-[#915EFF]/50 transition-all duration-300 group backdrop-blur-sm'
           aria-label="Previous projects"
         >
           <svg 
-            className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-1 transition-transform" 
+            className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:-translate-x-1 transition-transform" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
+            strokeWidth={2.5}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
         <button
           onClick={nextSlide}
-          className='absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#915EFF] to-[#7c3aed] hover:from-[#7c3aed] hover:to-[#915EFF] text-white p-3 sm:p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300 group'
+          className='absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 z-10 bg-[#151030] border-2 border-[#915EFF] hover:bg-[#915EFF] text-[#915EFF] hover:text-white p-2 sm:p-3 md:p-4 rounded-full shadow-xl hover:shadow-2xl hover:shadow-[#915EFF]/50 transition-all duration-300 group backdrop-blur-sm'
           aria-label="Next projects"
         >
           <svg 
-            className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" 
+            className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
+            strokeWidth={2.5}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
