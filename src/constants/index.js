@@ -4,7 +4,6 @@ import {
     creator,
     web,
     javascript,
-    typescript,
     html,
     css,
     reactjs,
@@ -14,14 +13,6 @@ import {
     mongodb,
     git,
     figma,
-    docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
     threejs,
     movie,
     hotel,
@@ -38,9 +29,7 @@ import {
     insta,
     msql,
     mysql,
-    express,
     anstudio,
-    postman,
     vscode,
   } from "../assets";
   
@@ -51,13 +40,33 @@ import {
     },
     {
       id: "work",
-      title: "Work",
+      title: "Education",
+    },
+    {
+      id: "experience",
+      title: "Experience",
     },
     {
       id: "contact",
       title: "Contact",
     },
+    {
+      id: "island",
+      title: "My Island",
+      isRoute: true,
+    },
   ];
+
+  const words = [
+  { text: "Ideas", imgPath: "/images/ideas.svg" },
+  { text: "Concepts", imgPath: "/images/concepts.svg" },
+  { text: "Designs", imgPath: "/images/designs.svg" },
+  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Ideas", imgPath: "/images/ideas.svg" },
+  { text: "Concepts", imgPath: "/images/concepts.svg" },
+  { text: "Designs", imgPath: "/images/designs.svg" },
+  { text: "Code", imgPath: "/images/code.svg" },
+];
   
   const services = [
     {
@@ -160,8 +169,55 @@ import {
       icon: threejs,
     },
   ];
+
+  const logoIconsList = [
+  {
+    imgPath: "/images/logos/company-logo-1.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-2.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-3.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-4.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-5.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-6.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-7.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-8.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-9.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-10.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-11.png",
+  },
+];
+
   
   const experiences = [
+    {
+      title: "Undergraduate",
+      company_name: "Sri Lanka Institute of Information Technology(SLIIT)",
+      icon: sliit,
+      iconBg: "#E6DEDD",
+      date: "Sep 2021 - 2025",
+      points: [
+        "Bsc (Hons.) Information Technology Specializing In Software Engineering (2021 - 2025).",
+      ],
+    },
     {
       title: "Student",
       company_name: "R/ Ananda Maithreya Central College",
@@ -175,48 +231,41 @@ import {
         // "Participating in code reviews and providing constructive feedback to other developers.",
       ],
     },
-    {
-      title: "Undergraduate",
-      company_name: "Sri Lanka Institute of Information Technology(SLIIT)",
-      icon: sliit,
-      iconBg: "#E6DEDD",
-      date: "Sep 2021 - 2025",
-      points: [
-        "Degree in Information Technology (2021 - 2025).",
-        "Demonstrated commitment to personal growth and skill enhancement.",
-        "Developed strong verbal and written communication skills.",
-        "Acquired practical experience in project management methodologies, effectively coordinating tasks and meeting deadlines within collaborative team settings.",
-        "Demonstrated strong analytical skills by successfully navigating and solving complex problems in various projects. Applied critical thinking to assess and address challenges, contributing to successful project outcomes.",
-        "Committed to achieving excellence in all tasks, with a focus on delivering high-quality results.",
-      ],
-    },
-    // {
-    //   title: "Web Developer",
-    //   company_name: "Shopify",
-    //   icon: shopify,
-    //   iconBg: "#383E56",
-    //   date: "Jan 2022 - Jan 2023",
-    //   points: [
-    //     "Developing and maintaining web applications using React.js and other related technologies.",
-    //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-    //     "Implementing responsive design and ensuring cross-browser compatibility.",
-    //     "Participating in code reviews and providing constructive feedback to other developers.",
-    //   ],
-    // },
-    // {
-    //   title: "Full stack Developer",
-    //   company_name: "Meta",
-    //   icon: meta,
-    //   iconBg: "#E6DEDD",
-    //   date: "Jan 2023 - Present",
-    //   points: [
-    //     "Developing and maintaining web applications using React.js and other related technologies.",
-    //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-    //     "Implementing responsive design and ensuring cross-browser compatibility.",
-    //     "Participating in code reviews and providing constructive feedback to other developers.",
-    //   ],
-    // },
   ];
+  
+const expCards = [
+  {
+    review: "Worked as a remote Intern Full Stack Developer at Datadyne Technologies LLC, a US-based startup. Collaborated closely with the engineering team to support the development and enhancement of a cross-platform desktop application . Contributed to improving product stability, refining user experience, and assisting with core technical processes to support the application's release and scalability.",
+    imgPath: "/images/exp1.png",
+    logoPath: "/images/logo2.png",
+    title: "Intern Full Stack Developer",
+    date: "April 2024 - October 2024",
+    responsibilities: [
+      "Contributed to development of cross-platform desktop app using ElectronJs for Automotive Shop performance monitor.",
+      "Fix ongoing issues and implemented new features based on Client feedback.",
+      "Research and development Licensing and distribution of desktop application.",
+      "Integrate payment gateways.",
+    ],
+  },
+  {
+    review: "This research project was carried out for LOLC Technologies to explore and build intelligent automation solutions for IT support. The work focused on analyzing research gaps and designing core components such as intelligent AI agents, conversational form-filling automation, integrated knowledge-base access, and avatar-driven interfaces. The project also involved studying suitable microservice architectures to support scalability and modularity. Throughout the development process, we followed Agile software engineering practices to iteratively design, implement, and evaluate the system based on real client requirements.",
+    imgPath: "/images/exp2.svg",
+    logoPath: "/images/logo3.png",
+    title: "Research Project",
+    date: "October 2024 - October 2025",
+    responsibilities: [
+      "Developed a Generative AI-based Coustomer and Employee IT Support Chatbot.",
+      "Collaborated with the team to implement features based on Client Requirements.",
+      "Designed and implemented an automated form-filling system using Rasa to collect user data through conversational flows.",
+      "Trained custom Rasa NLU models with example data for accurate intent recognition and entity extraction.",
+      "Built a form-loop mechanism with interruption and fallback handling to manage complex support conversations.",
+      "Implemented automated ticket classification using Sentence Transformers (ALL-MiniLM-L6) with metadata-based similarity matching.",
+      "Integrated LLM-powered suggestion generation using Ollama (Phi-3) to propose subjects and descriptions for user issues.",
+      "Developed a hybrid priority-detection engine combining keyword scoring and semantic analysis with business-rule adjustments.",
+      "Implemented automated ticket submission workflow and JSON output generation for API integration with client systems.",
+    ],
+  },
+];
   
   const testimonials = [
     {
@@ -349,4 +398,4 @@ import {
   }
 ];
   
-  export { services, technologies, experiences, testimonials, projects, socialLinks };
+  export { services, technologies, experiences, testimonials, projects, socialLinks, words, logoIconsList, expCards };

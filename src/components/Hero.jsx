@@ -1,153 +1,78 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
-
-import { useEffect } from 'react';
+import Button from "../components/Button";
+import { words } from "../constants";
+import HeroExperience from "../components/models/hero_models/HeroExperience";
 
 const Hero = () => {
-
-  useEffect(() => {
-    particlesJS('particles-js', {
-        "particles": {
-          "number": {
-            "value": 50,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 5
-            },
-            "image": {
-              "src": "img/github.svg",
-              "width": 100,
-              "height": 100
-            }
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-              "enable": false,
-              "speed": 1,
-              "opacity_min": 0.1,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 3,
-            "random": true,
-            "anim": {
-              "enable": false,
-              "speed": 40,
-              "size_min": 0.1,
-              "sync": false
-            }
-          },
-          "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "repulse"
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "push"
-            },
-            "resize": true
-          },
-          "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
-              }
-            },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
-            }
-          }
-        },
-        "retina_detect": true
-      
-    });
-  }, []);
+  useGSAP(() => {
+    gsap.fromTo(
+      ".hero-text h1",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+    );
+  });
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-
-      {/*<div id="particles-js" className={`${styles.particlesContainer} absolute inset-0`} />*/}
-      <div id="particles-js" className={`${styles.particlesContainer} absolute inset-0 z-10`} />
-      
-       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px]  max-w-7xl mx-auto flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
-         {/*About me */}
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Vishwa Udayantha</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-          Innovative IT undergraduate of SLIIT.<br className='sm:block hidden' />
-          Explore excellence!
-          </p>
-        </div>
+    <section id="hero" className="relative overflow-hidden">
+      <div className="absolute top-0 left-0 z-10">
+        <img src="/images/bg.png" alt="" />
       </div>
 
-      {/*<ComputersCanvas />*/}
+      <div className="hero-layout">
+        {/* LEFT: Hero Content */}
+        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+          <div className="flex flex-col gap-7">
+            <div className="hero-text">
+              <h1>
+                Shaping
+                <span className="slide">
+                  <span className="wrapper">
+                    {words.map((word, index) => (
+                      <span
+                        key={index}
+                        className="flex items-center md:gap-3 gap-1 pb-2"
+                      >
+                        <img
+                          src={word.imgPath}
+                          alt="person"
+                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+                        />
+                        <span>{word.text}</span>
+                      </span>
+                    ))}
+                  </span>
+                </span>
+              </h1>
+              <h1>into Real Projects</h1>
+              <h1>that Deliver Results</h1>
+            </div>
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+              Hi, I’m Vishwa Udayantha, a developer based in Croatia with a passion for
+              code.
+            </p>
+            <Button
+              text="More About Me"
+              className="md:w-80 md:h-16 w-60 h-12"
+              link="#about"
+            />
+            
+          </div>
+        </header>
+
+
+        {/* RIGHT: 3D Model or Visual */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
+      </div>
+      
+      {/* hover box */}
+      {/* <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div
@@ -163,10 +88,10 @@ const Hero = () => {
             />
           </div>
         </a>
-      </div>
+      </div> */}
 
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
