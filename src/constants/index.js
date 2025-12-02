@@ -4,7 +4,6 @@ import {
     creator,
     web,
     javascript,
-    typescript,
     html,
     css,
     reactjs,
@@ -14,14 +13,6 @@ import {
     mongodb,
     git,
     figma,
-    docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
     threejs,
     movie,
     hotel,
@@ -38,9 +29,7 @@ import {
     insta,
     msql,
     mysql,
-    express,
     anstudio,
-    postman,
     vscode,
   } from "../assets";
   
@@ -77,13 +66,6 @@ import {
   { text: "Concepts", imgPath: "/images/concepts.svg" },
   { text: "Designs", imgPath: "/images/designs.svg" },
   { text: "Code", imgPath: "/images/code.svg" },
-];
-
-const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
   
   const services = [
@@ -227,6 +209,16 @@ const counterItems = [
   
   const experiences = [
     {
+      title: "Undergraduate",
+      company_name: "Sri Lanka Institute of Information Technology(SLIIT)",
+      icon: sliit,
+      iconBg: "#E6DEDD",
+      date: "Sep 2021 - 2025",
+      points: [
+        "Bsc (Hons.) Information Technology Specializing In Software Engineering (2021 - 2025).",
+      ],
+    },
+    {
       title: "Student",
       company_name: "R/ Ananda Maithreya Central College",
       icon: amcc,
@@ -239,82 +231,27 @@ const counterItems = [
         // "Participating in code reviews and providing constructive feedback to other developers.",
       ],
     },
-    {
-      title: "Undergraduate",
-      company_name: "Sri Lanka Institute of Information Technology(SLIIT)",
-      icon: sliit,
-      iconBg: "#E6DEDD",
-      date: "Sep 2021 - 2025",
-      points: [
-        "Degree in Information Technology (2021 - 2025).",
-        "Demonstrated commitment to personal growth and skill enhancement.",
-        "Developed strong verbal and written communication skills.",
-        "Acquired practical experience in project management methodologies, effectively coordinating tasks and meeting deadlines within collaborative team settings.",
-        "Demonstrated strong analytical skills by successfully navigating and solving complex problems in various projects. Applied critical thinking to assess and address challenges, contributing to successful project outcomes.",
-        "Committed to achieving excellence in all tasks, with a focus on delivering high-quality results.",
-      ],
-    },
-    // {
-    //   title: "Web Developer",
-    //   company_name: "Shopify",
-    //   icon: shopify,
-    //   iconBg: "#383E56",
-    //   date: "Jan 2022 - Jan 2023",
-    //   points: [
-    //     "Developing and maintaining web applications using React.js and other related technologies.",
-    //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-    //     "Implementing responsive design and ensuring cross-browser compatibility.",
-    //     "Participating in code reviews and providing constructive feedback to other developers.",
-    //   ],
-    // },
-    // {
-    //   title: "Full stack Developer",
-    //   company_name: "Meta",
-    //   icon: meta,
-    //   iconBg: "#E6DEDD",
-    //   date: "Jan 2023 - Present",
-    //   points: [
-    //     "Developing and maintaining web applications using React.js and other related technologies.",
-    //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-    //     "Implementing responsive design and ensuring cross-browser compatibility.",
-    //     "Participating in code reviews and providing constructive feedback to other developers.",
-    //   ],
-    // },
   ];
-
-
   
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Vishwa’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
-    ],
-  },
-  {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    title: "Intern Full Stack Developer",
+    date: "April 2024 - October 2024",
     responsibilities: [
+      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
       "Led the development of Docker's web applications, focusing on scalability.",
       "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
+    review: "Vishwa’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    imgPath: "/images/exp2.svg",
     logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    title: "Research Project",
+    date: "October 2024 - October 2025",
     responsibilities: [
       "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
       "Improved app performance and user experience through code optimization and testing.",
@@ -454,4 +391,4 @@ const expCards = [
   }
 ];
   
-  export { services, technologies, experiences, testimonials, projects, socialLinks, words, counterItems, logoIconsList, expCards };
+  export { services, technologies, experiences, testimonials, projects, socialLinks, words, logoIconsList, expCards };
