@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 import {styles} from '../styles';
 import {navLinks} from '../constants';
@@ -8,6 +8,26 @@ import {logo, menu, close} from '../assets';
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (link) => {
+    setActive(link.title);
+    if (link.isRoute) {
+      navigate('/island');
+    } else {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById(link.id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    }
+  };
+
   return (
     <nav
       className={`${
@@ -33,10 +53,13 @@ const Navbar = () => {
             <li
               key = {link.id}
               className={`${active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer `}
-              onClick={() => setActive(link.title)}
+              onClick={() => handleNavClick(link)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
-
+              {link.isRoute ? (
+                <span>{link.title}</span>
+              ) : (
+                <a href={`#${link.id}`}>{link.title}</a>
+              )}
             </li>
             )}
 
@@ -51,12 +74,16 @@ const Navbar = () => {
             <li
               key = {link.id}
               className={`${active === link.title ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px]`}
-              onClick={() => {setToggle(!toggle);
-                setActive(link.title);
+              onClick={() => {
+                setToggle(!toggle);
+                handleNavClick(link);
               }}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
-
+              {link.isRoute ? (
+                <span>{link.title}</span>
+              ) : (
+                <a href={`#${link.id}`}>{link.title}</a>
+              )}
             </li>
             )}
 

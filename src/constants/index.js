@@ -57,6 +57,11 @@ import {
       id: "contact",
       title: "Contact",
     },
+    {
+      id: "island",
+      title: "My Island",
+      isRoute: true,
+    },
   ];
   
   const services = [

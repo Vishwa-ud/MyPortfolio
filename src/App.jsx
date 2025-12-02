@@ -1,14 +1,12 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import {Home, About, Contact, Experience, Feedbacks, Hero, Navbar, Tech , Works, StarsCanvas, Footer} from './components';
 
-const App = () => {
+const MainContent = () => {
   return (
-    <BrowserRouter>
-   <div className="relative z-0 bg-primary">
+    <div className="relative z-0 bg-primary">
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <Navbar />
-        <Home />
         <Hero />
       </div>
       <About />
@@ -20,10 +18,24 @@ const App = () => {
         <Contact />
         <StarsCanvas />
         <Footer />
-
       </div>
-   </div>
-   </BrowserRouter>
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/island" element={
+          <div className="relative z-0 bg-primary">
+            <Navbar />
+            <Home />
+          </div>
+        } />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
