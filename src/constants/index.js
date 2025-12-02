@@ -296,20 +296,280 @@ const expCards = [
   
   const projects = [
     {
-      name: "Movie Theatre Management System",
+      name: "Full Stack ASP.NET Core MVC Financial App",
       description:
-        "Revolutionize movie-going with Full-Stack Web-based platform that allows users to search, book, and purchase movie tickets and deals and exclusives from movie theatre,This project is developed for automataing manual work in movie theatre. Simplify and enhance theater management for an interactive experience.",
+        "Developed a full-stack financial web app using ASP.NET Core MVC (.NET 9) following MVC architecture, with Entity Framework Core and SQL Server. Built responsive UI with HTML, CSS, JavaScript, and Bootstrap. Managed packages with NuGet and source control with Git.",
+      tags: [
+        {
+          name: "ASP.NET Core",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Entity Framework",
+          color: "green-text-gradient",
+        },
+        {
+          name: "SQL Server",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Bootstrap",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "June 2025",
+    },
+    {
+      name: "LearningAssistant ChatBot",
+      description:
+        "Developed a smart chatbot in Jupyter Notebook using LLaMA via Ollama, RAG, and vectorDB to answer CTSE lecture questions. Integrated LlamaParse for PDF ingestion, SentenceTransformers for semantic search, and applied prompt engineering for accurate LLM responses.",
+      tags: [
+        {
+          name: "LLaMA",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "RAG",
+          color: "green-text-gradient",
+        },
+        {
+          name: "VectorDB",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Python",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "May 2025 - Apr 2025",
+    },
+    {
+      name: "Educational Platform for Online Learning",
+      description:
+        "Built a containerized e-learning platform using MERN, and Python Flask microservices orchestrated with Docker. Deployed on Google Cloud Platform (GCP) using Kubernetes for scalable orchestration. Applied DevOps best practices with CI/CD pipelines for automated builds and deployments.",
+      tags: [
+        {
+          name: "MERN",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Flask",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Docker",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Kubernetes",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "GCP",
+          color: "green-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "Mar 2025 - May 2025",
+    },
+    {
+      name: "Next.js Secure Authentication Platform",
+      description:
+        "Developed a secure Next.js application with OAuth authentication using TypeScript, SASS styling, and PostgreSQL database. Implemented scalable authentication flows and responsive design patterns for optimal user experience.",
+      tags: [
+        {
+          name: "Next.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "TypeScript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "PostgreSQL",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "OAuth",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "Apr 2025",
+    },
+    {
+      name: "Hunger Buster React Native Mobile App",
+      description:
+        "Created a React Native app addressing UN SDG 2 (Zero Hunger) to connect food donors with distribution networks. Implemented cross-platform functionality with intuitive UX for users.",
+      tags: [
+        {
+          name: "React Native",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Mobile Development",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Cross-Platform",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "Jul 2024 - Oct 2024",
+    },
+    {
+      name: "Smart Healthcare System for Urban Hospitals",
+      description:
+        "Designed a healthcare management system for urban hospitals using MERN stack and OOP principles. Implemented features for patient records, appointment scheduling, and resource allocation.",
+      tags: [
+        {
+          name: "MERN",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "MongoDB",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Node.js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "Jul 2024 - Oct 2024",
+    },
+    {
+      name: "Automated Code Analyser CodeWizard",
+      description:
+        "Developed a code analysis tool using MERN stack with Python microservices in Docker containers. Created algorithms for code quality assessment with an intuitive Tailwind CSS dashboard.",
+      tags: [
+        {
+          name: "MERN",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Python",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Docker",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Tailwind CSS",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "Jul 2024 - Oct 2024",
+    },
+    {
+      name: "NASA API Powered Space App",
+      description:
+        "Developed an interactive web application utilizing NASA's public APIs with ReactJS and Tailwind CSS. Implemented secure authentication with JWT and comprehensive testing using Vitest and Jest.",
       tags: [
         {
           name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "Mongodb",
+          name: "NASA API",
           color: "green-text-gradient",
         },
         {
-          name: "MERNStack",
+          name: "Tailwind CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "JWT",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "Apr 2024 - May 2024",
+    },
+    {
+      name: "University Timetable Management System",
+      description:
+        "Engineered a backend system for university scheduling using Node.js, Express, and MongoDB. Implemented JWT authentication and comprehensive testing with Jest and unittest frameworks.",
+      tags: [
+        {
+          name: "Node.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "MongoDB",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "JWT",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: portfolio, // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "Mar 2024 - Apr 2024",
+    },
+    {
+      name: "3D Web Developer Portfolio",
+      description:
+        "Crafted an immersive portfolio website using Three.js, React, and Tailwind CSS with Vite. Implemented interactive 3D models and animations to showcase projects with optimized performance.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "ThreeJS",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Tailwind CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Vite",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: portfolio,
+      source_code_link: "https://github.com/Vishwa-ud/",
+      date: "Dec 2023 - Jan 2024",
+    },
+    {
+      name: "Movie Theatre Management System",
+      description:
+        "Built a comprehensive cinema management solution using MERN stack for ticket booking and show management. Created interfaces for both administrators and customers with real-time seat selection.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "MongoDB",
+          color: "green-text-gradient",
+        },
+        {
+          name: "MERN Stack",
           color: "pink-text-gradient",
         },
         {
@@ -320,10 +580,10 @@ const expCards = [
           name: "Javascript",
           color: "green-text-gradient",
         },
-
       ],
       image: movie,
       source_code_link: "https://github.com/Vishwa-ud/Movie-theatre-management-system",
+      date: "Jul 2023 - Oct 2023",
     },
     {
       name: "Hotel Management System",
@@ -357,27 +617,6 @@ const expCards = [
       ],
       image: hotel,
       source_code_link: "https://github.com/Vishwa-ud/project01",
-    },
-    {
-      name: "3D Portfolio",
-      description:
-        "Embark on a captivating journey through my portfolio, where cutting-edge technology meets creativity. Immerse yourself in a world of 3D graphics and animations powered by ThreeJS, Framer Motion, and React Three Fiber. Explore my excellence with a floating island and connect effortlessly through the EmailJs-enabled email function.",
-      tags: [
-        {
-          name: "React",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "ThreeJS",
-          color: "green-text-gradient",
-        },
-        {
-          name: "TailwindCSS",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: portfolio,
-      source_code_link: "https://github.com/Vishwa-ud/",
     },
   ];
   const socialLinks = [
