@@ -1,53 +1,79 @@
-import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+import AnimatedCounter from "../components/AnimatedCounter";
+import Button from "../components/Button";
+import { words } from "../constants";
+import HeroExperience from "../components/models/hero_models/HeroExperience";
 
 const Hero = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      ".hero-text h1",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+    );
+  });
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      
-       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px]  max-w-7xl mx-auto flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
-         {/*About me */}
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Vishwa Udayantha</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-          Innovative IT undergraduate of SLIIT.<br className='sm:block hidden' />
-          Explore excellence!
-          </p>
-        </div>
+    <section id="hero" className="relative overflow-hidden">
+      <div className="absolute top-0 left-0 z-10">
+        <img src="/images/bg.png" alt="" />
       </div>
 
-      {/*<ComputersCanvas />*/}
+      <div className="hero-layout">
+        {/* LEFT: Hero Content */}
+        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+          <div className="flex flex-col gap-7">
+            <div className="hero-text">
+              <h1>
+                Shaping
+                <span className="slide">
+                  <span className="wrapper">
+                    {words.map((word, index) => (
+                      <span
+                        key={index}
+                        className="flex items-center md:gap-3 gap-1 pb-2"
+                      >
+                        <img
+                          src={word.imgPath}
+                          alt="person"
+                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+                        />
+                        <span>{word.text}</span>
+                      </span>
+                    ))}
+                  </span>
+                </span>
+              </h1>
+              <h1>into Real Projects</h1>
+              <h1>that Deliver Results</h1>
+            </div>
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+              Hi, I’m Vishwa Udayantha, a developer based in Croatia with a passion for
+              code.
+            </p>
+
+            <Button
+              text="See My Work"
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="counter"
             />
           </div>
-        </a>
+        </header>
+
+        {/* RIGHT: 3D Model or Visual */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
 
+      <AnimatedCounter />
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

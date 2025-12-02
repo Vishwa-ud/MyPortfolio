@@ -74,6 +74,13 @@ import {
   { text: "Designs", imgPath: "/images/designs.svg" },
   { text: "Code", imgPath: "/images/code.svg" },
 ];
+
+const counterItems = [
+  { value: 15, suffix: "+", label: "Years of Experience" },
+  { value: 200, suffix: "+", label: "Satisfied Clients" },
+  { value: 108, suffix: "+", label: "Completed Projects" },
+  { value: 90, suffix: "%", label: "Client Retention Rate" },
+];
   
   const services = [
     {
@@ -365,4 +372,4 @@ import {
   }
 ];
   
-  export { services, technologies, experiences, testimonials, projects, socialLinks };
+  export { services, technologies, experiences, testimonials, projects, socialLinks, words, counterItems };

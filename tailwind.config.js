@@ -11,6 +11,15 @@ module.exports = {
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
+        // New color tokens
+        "white-50": "#d9ecff",
+        "black-50": "#1c1c21",
+        "blue-50": "#839cb5",
+        "blue-100": "#2d2d38",
+      },
+      backgroundColor: {
+        "black-100": "#0e0e10",
+        "black-200": "#282732",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
@@ -23,7 +32,8 @@ module.exports = {
       },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],
-        poppins: ['Poppins', "sans-serif"]
+        poppins: ['Poppins', "sans-serif"],
+        monasans: ["Mona Sans", "sans-serif"],
       },
       
     },
