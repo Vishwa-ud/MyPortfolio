@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -30,6 +31,15 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Show loading toast
+    const loadingToast = toast.loading("Sending your message...", {
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -50,7 +60,18 @@ const Contact = () => {
 
       if (result.success) {
         setLoading(false);
-        alert("Thank you. I will get back to you as soon as possible.");
+        toast.success("Thank you! I will get back to you as soon as possible.", {
+          duration: 4000,
+          style: {
+            borderRadius: "10px",
+            background: "#10b981",
+            color: "#fff",
+          },
+          iconTheme: {
+            primary: "#fff",
+            secondary: "#10b981",
+          },
+        });
         setForm({
           name: "",
           email: "",
@@ -62,7 +83,21 @@ const Contact = () => {
     } catch (error) {
       setLoading(false);
       console.error(error);
-      alert("Ahh, something went wrong. Please try again.");
+      toast.error("Oops! Something went wrong. Please try again.", {
+        duration: 4000,
+        style: {
+          borderRadius: "10px",
+          background: "#ef4444",
+          color: "#fff",
+        },
+        iconTheme: {
+          primary: "#fff",
+          secondary: "#ef4444",
+        },
+      });
+    } finally {
+      // Dismiss loading toast
+      toast.dismiss(loadingToast);
     }
   };
 
