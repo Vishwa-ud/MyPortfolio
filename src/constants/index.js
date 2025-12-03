@@ -204,6 +204,12 @@ import {
   {
     imgPath: "/images/logos/company-logo-11.png",
   },
+  {
+    imgPath: "/images/logos/company-logo-12.png",
+  },
+  {
+    imgPath: "/images/logos/company-logo-13.png",
+  },
 ];
 
   
@@ -317,8 +323,8 @@ const expCards = [
           color: "blue-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
-      source_code_link: "https://github.com/Vishwa-ud/",
+      image: "/images/repo/repo1.png", // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/ASP.NET-Core-MVC-Web-App.git",
       date: "June 2025",
     },
     {
@@ -327,7 +333,7 @@ const expCards = [
         "Developed a smart chatbot in Jupyter Notebook using LLaMA via Ollama, RAG, and vectorDB to answer CTSE lecture questions. Integrated LlamaParse for PDF ingestion, SentenceTransformers for semantic search, and applied prompt engineering for accurate LLM responses.",
       tags: [
         {
-          name: "LLaMA",
+          name: "Ollama",
           color: "blue-text-gradient",
         },
         {
@@ -343,8 +349,8 @@ const expCards = [
           color: "blue-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
-      source_code_link: "https://github.com/Vishwa-ud/",
+      image: "/images/repo/repo2.png", // Update with actual image
+      source_code_link: "https://github.com/Vishwa-ud/LearningAssistant-ChatBot.git",
       date: "May 2025 - Apr 2025",
     },
     {
@@ -373,7 +379,7 @@ const expCards = [
           color: "green-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
+      image: "/images/repo/repo3.png", // Update with actual image
       source_code_link: "https://github.com/Vishwa-ud/",
       date: "Mar 2025 - May 2025",
     },
@@ -399,7 +405,7 @@ const expCards = [
           color: "blue-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
+      image: "/images/repo/repo4.png", // Update with actual image
       source_code_link: "https://github.com/Vishwa-ud/",
       date: "Apr 2025",
     },
@@ -421,7 +427,7 @@ const expCards = [
           color: "pink-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
+      image: "/images/repo/repo5.png", // Update with actual image
       source_code_link: "https://github.com/Vishwa-ud/",
       date: "Jul 2024 - Oct 2024",
     },
@@ -447,7 +453,7 @@ const expCards = [
           color: "blue-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
+      image: "/images/repo/repo6.png", // Update with actual image
       source_code_link: "https://github.com/Vishwa-ud/",
       date: "Jul 2024 - Oct 2024",
     },
@@ -473,7 +479,7 @@ const expCards = [
           color: "blue-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
+      image: "/images/repo/repo7.png", // Update with actual image
       source_code_link: "https://github.com/Vishwa-ud/",
       date: "Jul 2024 - Oct 2024",
     },
@@ -499,7 +505,7 @@ const expCards = [
           color: "blue-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
+      image: "/images/repo/repo8.png", // Update with actual image
       source_code_link: "https://github.com/Vishwa-ud/",
       date: "Apr 2024 - May 2024",
     },
@@ -525,7 +531,7 @@ const expCards = [
           color: "blue-text-gradient",
         },
       ],
-      image: portfolio, // Update with actual image
+      image: "/images/repo/repo9.png", // Update with actual image
       source_code_link: "https://github.com/Vishwa-ud/",
       date: "Mar 2024 - Apr 2024",
     },
