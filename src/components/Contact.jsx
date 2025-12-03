@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -27,41 +26,44 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        'service_q6fx7rj',
-        'template_gel34h4',
-        {
-          from_name: form.name,
-          to_name: "Vishwa udayantha",
-          from_email: form.email,
-          to_email: "userzero330@gmail.com",
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.WEB3FORMS_ACCESS_KEY,
+          name: form.name,
+          email: form.email,
           message: form.message,
-        },
-        'tk21Y4RreMU7sg-va'
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          subject: "New Contact Form Submission from Portfolio",
+        }),
+      });
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+      const result = await response.json();
 
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+      if (result.success) {
+        setLoading(false);
+        alert("Thank you. I will get back to you as soon as possible.");
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        throw new Error(result.message || "Form submission failed");
+      }
+    } catch (error) {
+      setLoading(false);
+      console.error(error);
+      alert("Ahh, something went wrong. Please try again.");
+    }
   };
 
   return (
