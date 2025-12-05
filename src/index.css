@@ -634,6 +634,11 @@ body:has(.card[data-color="green"]:hover) {
 
   .exp-card-wrapper {
     @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
+    
+    /* Fix mobile overlap - add subtle left padding on mobile to account for timeline */
+    & > div:first-child {
+      @apply xl:pl-0 md:pl-16 pl-12;
+    }
   }
 
   .gradient-edge {
