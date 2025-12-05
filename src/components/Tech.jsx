@@ -1,59 +1,82 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
 import { styles } from "../styles";
 
-const Tech = () => {
+// Optimized card component with memoization to prevent unnecessary re-renders
+const TechCard = React.memo(({ technology, index }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <>
-    <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My skills</p>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ 
+        duration: 0.5, 
+        delay: index * 0.05,
+        ease: "easeOut"
+      }}
+      className="tech-card-wrapper"
+    >
+      <div
+        className="tech-card group"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* Animated background gradient */}
+        <div className="tech-card-bg" />
+        
+        {/* Icon container */}
+        <div className="tech-icon-container">
+          <img
+            src={technology.icon}
+            alt={technology.name}
+            className="tech-icon"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Tech name - shows on hover */}
+        <div className={`tech-name ${isHovered ? 'tech-name-visible' : ''}`}>
+          <p className="text-white text-sm font-medium text-center">
+            {technology.name}
+          </p>
+        </div>
+
+        {/* Hover glow effect */}
+        <div className="tech-glow" />
+      </div>
+    </motion.div>
+  );
+});
+
+TechCard.displayName = 'TechCard';
+
+// Main Tech component
+function Tech() {
+  return (
+    <div className="w-full">
+      {/* Header Section */}
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText}`}>My skills</p>
         <h2 className={`${styles.sectionHeadText}`}>Tools & Technologies.</h2>
       </motion.div>
-    <div className='py-10 flex flex-col'>
-    <h3 className='subhead-text'></h3>
 
-    <div className='mt-16 flex flex-wrap gap-12'>
-      {technologies.map((technology) => (
-        <div className='block-container w-20 h-20' key={technology.name}>
-          {/* <div className=' rounded-xl ' /> */}
-          <div className='btn-front rounded-xl flex justify-center items-center'>
-            <img
-              src={technology.icon}
-              alt={technology.name}
-              className='w-1/2 h-1/2 object-contain'
-            />
-          </div>
-        </div>
-      ))}
+      {/* Tech Grid */}
+      <div className="tech-grid">
+        {technologies.map((technology, index) => (
+          <TechCard
+            key={technology.name}
+            technology={technology}
+            index={index}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-  </>
   );
-};
+}
 
-export default SectionWrapper(Tech, "");
-
-
-
-
-// import { BallCanvas } from "./canvas";
-// import { SectionWrapper } from "../hoc";
-// import { technologies } from "../constants";
-
-// const Tech = () => {
-//   return (
-//     <div className='flex flex-row flex-wrap justify-center gap-10'>
-//       {technologies.map((technology) => (
-//         <div className='w-28 h-28' key={technology.name}>
-//           <BallCanvas icon={technology.icon} />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, "tech");
