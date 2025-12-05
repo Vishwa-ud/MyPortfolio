@@ -44,7 +44,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify'
       >
         I am Vishwa Udayantha from Colombo,Sri Lanka. I am Currently following a Bsc(Hons.) Information Technology Specializing In Software Engineering degree in Sri Lanka Institute of Information Technology (SLIIT).
         Eager to contribute my skills and knowledge to the dynamic field of software engineering. Open to opportunities for internships and collaborative projects to apply and enhance my learning that solve real-world problems. in a practical setting. With my experience in web development, programming, data analysis, and project management, together with my passion for technology, I can pick things up fast and make a big contribution to a team. Let's work together to bring your ideas to life.
