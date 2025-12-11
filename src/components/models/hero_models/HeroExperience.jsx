@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { Room } from "./Room";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
+import CanvasLoader from "../../Loader";
 
 const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -25,7 +26,7 @@ const HeroExperience = () => {
         maxPolarAngle={Math.PI / 2} // Maximum angle for vertical rotation
       />
 
-      <Suspense fallback={null}>
+      <Suspense fallback={<CanvasLoader />}>
         <HeroLights />
         <Particles count={100} />
         <group
