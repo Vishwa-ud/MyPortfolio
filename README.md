@@ -1,46 +1,132 @@
-<h3 align="center">3D Web Developer Portfolio</h3>
+<div align="center">
+  <h1>🚀 Vishwa Kuruppu - 3D Portfolio</h1>
+  <p><strong>Shaping Ideas, Concepts, Designs & Code into Real Projects that Deliver Results</strong></p>
+  
+  <p>
+    <a href="https://vishwa-kuruppu-vk-portfolio.vercel.app/" target="_blank">
+      <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Portfolio-00C7B7?style=for-the-badge" alt="Live Demo" />
+    </a>
+    <a href="https://github.com/Vishwa-ud" target="_blank">
+      <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github" alt="GitHub" />
+    </a>
+    <a href="https://lk.linkedin.com/in/vishwa-kuruppu-7271892a2" target="_blank">
+      <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+    </a>
+  </p>
+</div>
+
+<br />
 
 <div align="center">
-Embark on a virtual journey through my portfolio, set on a captivating floating island. Navigate the scenic landscapes, discover my projects, and soar with creativity. Explore now!
-</div>
-<div>
-    <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
-    <img src="https://img.shields.io/badge/-Three_JS-black?style=for-the-badge&logoColor=white&logo=threedotjs&color=000000" alt="three.js" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+  <img src="https://github.com/Vishwa-ud/3D-Web-Developer-Portfolio/assets/94515855/1c0af101-b70f-4314-bd14-7c69a30b3266" alt="Portfolio Banner" width="100%" />
 </div>
 
-## Check It Out!
-Feel free to explore my portfolio and see what I've been up to. If you have any questions or would like to get in touch, don't hesitate to reach out!
-[View Portfolio]().
-
-<br />
-<img src="https://github.com/Vishwa-ud/3D-Web-Developer-Portfolio/assets/94515855/1c0af101-b70f-4314-bd14-7c69a30b3266" alt="Project Banner">
 <br />
 
+<div align="center">
+  <img src="./public/images/qr-code.png" alt="Portfolio QR Code" width="200" />
+  <p><em>📱 Scan to visit my portfolio on mobile</em></p>
+</div>
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+---
 
-- React.js
-- Three.js
-- React Three Fiber
-- React Three Drei
-- Email JS
-- Vite
-- Tailwind CSS
+## 🎨 Portfolio Features
 
-## <a name="features">🔋 Features</a>
-👉 **3D Floating island.
+This portfolio showcases a unique **3D interactive experience** built with cutting-edge web technologies:
 
-👉 **Interactive Experience and Work Sections**: Utilizes animations powered by framer motion for engaging user experience.
+### ✨ Key Features
 
-👉 **Animated Projects**: Features animated sections using framer motion for projects.
+- 🏝️ **3D Floating Island** - Immersive 3D environment with interactive navigation
+- 🎭 **Interactive Animations** - Smooth animations powered by Framer Motion
+- 🌍 **3D Earth Model** - Interactive contact section with 3D visualization
+- ⭐ **Dynamic Star Field** - Procedurally generated stars using Three.js
+- 📧 **Email Integration** - Contact form powered by EmailJS
+- 📱 **Fully Responsive** - Optimized for all devices and screen sizes
+- 🎯 **Modern UI/UX** - Clean, professional design with attention to detail
+- 🚀 **Fast Performance** - Built with Vite for lightning-fast load times
+- 📊 **Web Analytics** - Integrated with Vercel Analytics for insights
 
-👉 **Contact Section with 3D Earth Model**:Integrates a 3D earth model with email functionality powered by emailjs.
+### 🔧 Built With
 
-👉 **3D Stars**: Generate stars progressively at random positions using Three.js for background display.
+- **React.js** - UI library
+- **Three.js** - 3D graphics library
+- **React Three Fiber** - React renderer for Three.js
+- **React Three Drei** - Useful helpers for React Three Fiber
+- **Framer Motion** - Animation library
+- **Tailwind CSS** - Utility-first CSS framework
+- **EmailJS** - Email service integration
+- **Vite** - Next-generation frontend tooling
+- **Vercel Analytics** - Web analytics platform
 
-👉 **Consistent Animations**: Implements cohesive animations throughout the website using framer motion.
+---
 
-👉 **Responsive Design**: Ensures optimal display and functionality across all devices.
+## 🚀 Getting Started
 
-and many more, including code architecture and reusability 
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Vishwa-ud/MyPortfolio.git
+   cd MyPortfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp example.env .env
+   ```
+   Update the `.env` file with your EmailJS credentials and other configurations.
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+6. **Preview production build**
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## 📧 Contact
+
+Feel free to reach out to me for collaborations, opportunities, or just to say hi!
+
+- 🌐 **Portfolio:** [vishwa-kuruppu-vk-portfolio.vercel.app](https://vishwa-kuruppu-vk-portfolio.vercel.app/)
+- 💼 **LinkedIn:** [Vishwa Kuruppu](https://lk.linkedin.com/in/vishwa-kuruppu-7271892a2)
+- 🐙 **GitHub:** [@Vishwa-ud](https://github.com/Vishwa-ud)
+- 📸 **Instagram:** [@vish__0111](https://www.instagram.com/vish__0111/)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+Special thanks to all the open-source projects and communities that made this portfolio possible.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by <strong>Vishwa Kuruppu</strong></p>
+  <p>© 2025 Vishwa Kuruppu. All rights reserved.</p>
+</div> 

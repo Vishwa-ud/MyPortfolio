@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from "@vercel/analytics/react";
 
 import {Home, About, Contact, Experience, ProExperience , Feedbacks, Hero, Navbar, Tech , LogoShowcase , Works, StarsCanvas, Footer} from './components';
 
@@ -51,6 +52,7 @@ const App = () => {
           </div>
         } />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   )
 }
