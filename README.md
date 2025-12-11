@@ -18,12 +18,6 @@
 <br />
 
 <div align="center">
-  <img src="https://github.com/Vishwa-ud/3D-Web-Developer-Portfolio/assets/94515855/1c0af101-b70f-4314-bd14-7c69a30b3266" alt="Portfolio Banner" width="100%" />
-</div>
-
-<br />
-
-<div align="center">
   <img src="./public/images/qr-code.png" alt="Portfolio QR Code" width="200" />
   <p><em>📱 Scan to visit my portfolio on mobile</em></p>
 </div>
