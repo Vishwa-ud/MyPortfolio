@@ -49,14 +49,17 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
 
           const delta = (clientX - lastX.current) / viewport.width;
   
+          // Increase sensitivity for touch devices
+          const rotationFactor = e.touches ? 0.015 : 0.01;
+          
           // Update the island's rotation based on the mouse/touch movement
-        islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+        islandRef.current.rotation.y += delta * rotationFactor * Math.PI;
   
         // Update the reference for the last clientX position
         lastX.current = clientX;
   
         // Update the rotation speed
-        rotationSpeed.current = delta * 0.01 * Math.PI;
+        rotationSpeed.current = delta * rotationFactor * Math.PI;
 
         }
         
@@ -133,6 +136,9 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
       canvas.addEventListener("pointerdown", handlePointerDown);
       canvas.addEventListener("pointerup", handlePointerUp);
       canvas.addEventListener("pointermove", handlePointerMove);
+      canvas.addEventListener("touchstart", handlePointerDown, { passive: false });
+      canvas.addEventListener("touchend", handlePointerUp, { passive: false });
+      canvas.addEventListener("touchmove", handlePointerMove, { passive: false });
         document.addEventListener("keydown", handleKeyDown);
         document.addEventListener("keyup", handleKeyUp);
 
@@ -140,6 +146,9 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
           canvas.removeEventListener("pointerdown", handlePointerDown);
           canvas.removeEventListener("pointerup", handlePointerUp);
           canvas.removeEventListener("pointermove", handlePointerMove);
+          canvas.removeEventListener("touchstart", handlePointerDown);
+          canvas.removeEventListener("touchend", handlePointerUp);
+          canvas.removeEventListener("touchmove", handlePointerMove);
             document.removeEventListener("keydown", handleKeyDown);
             document.removeEventListener("keyup", handleKeyUp);
         }

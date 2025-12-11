@@ -19,22 +19,13 @@ const Home = () => {
     const [currentStage, setCurrentStage] = useState(1);
     const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
-    useEffect(() => {
-      if(isPlayingMusic){
-        audioRef.current.play();
-      }
-      return () => {
-        audioRef.current.pause();
-      }
-    },[isPlayingMusic]);
-
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
         let screenPosition = [0, -6.5, -43.4] ;
         let rotation = [0.1, 4.7, 0];
     
         if (window.innerWidth < 768) {
-          screenScale = [0.9, 0.9, 0.9];
+          screenScale = [0.6, 0.6, 0.6];
         } else {
           screenScale = [1, 1, 1];
         }
@@ -46,7 +37,7 @@ const Home = () => {
         let screenScale, screenPosition;
     
         if (window.innerWidth < 768) {
-          screenScale = [1.5, 1.5, 1.5];
+          screenScale = [1.9, 1.9, 1.9];
           screenPosition = [0, -1.5, 0];
         } else {
           screenScale = [3, 3, 3];
@@ -56,8 +47,32 @@ const Home = () => {
         return [screenScale, screenPosition];
       };
          
-    const [islandScale, islandPosition, islandrotation] = adjustIslandForScreenSize();
-    const [planeScale, planePosition] = adjustPlaneForScreenSize();
+    const [islandScale, setIslandScale] = useState(adjustIslandForScreenSize()[0]);
+    const [islandPosition] = useState(adjustIslandForScreenSize()[1]);
+    const [islandrotation] = useState(adjustIslandForScreenSize()[2]);
+    const [planeScale, setPlaneScale] = useState(adjustPlaneForScreenSize()[0]);
+    const [planePosition] = useState(adjustPlaneForScreenSize()[1]);
+
+    useEffect(() => {
+      if(isPlayingMusic){
+        audioRef.current.play();
+      }
+      return () => {
+        audioRef.current.pause();
+      }
+    },[isPlayingMusic]);
+
+    useEffect(() => {
+      const handleResize = () => {
+        const [newIslandScale] = adjustIslandForScreenSize();
+        const [newPlaneScale] = adjustPlaneForScreenSize();
+        setIslandScale(newIslandScale);
+        setPlaneScale(newPlaneScale);
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
 return (
     <section className='w-full h-screen relative'>
